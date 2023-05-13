@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+     <header class="oculto">    <p>Academia Sunom . Susana Mayán</p>  </header> 
+    <button id="btn-menu" class="btn oculto" onclick="menu()">Menu</button>
+    <div id="menu-datos" class="oculto menu-datos ">
+        <menu class="oculto">
+            <form id="form" action="">
+                <br>
+                <div>
+                    <label for="inp-encabezado">Nombre del taller/curso</label>
+                    <br><input id="inp-encabezado" class="input" placeholder="Nombre taller" type="text">
+                </div>
+                <div>
+                    <label for="opcion-fondos">seleccione el fondo del certificado</label>
+                    <br><select id="opcion-fondos"  class="input">
+                        <option value=5>humo violeta</option>
+                        <option value=1>marrón</option>
+                        <option value=2>negro</option>
+                        <option value=3>humo celeste</option>                
+                        <option value=4>humo azul</option>
+                        <option value=6>humo naranja</option>
+                        <option value=7>humo fuccia</option>    
+                    </select>
+                </div>
+                <div>
+                    <label for="inp-alumno">Nombre y apellido del alumno</label>
+                    <br><input id="inp-alumno"  class="input" placeholder="Nombre y apellido de alumno" required minlength="6" maxlength="25" type="text">
+                </div>
+            </form>
+        </menu>
+                <div id="btn-imp">
+                    <button class="btn">Imprimir certificado</button>
+                </div>
+                <div id="btn-generar">
+                    <button class="btn" onclick="generar_certificado()">Generar certificado</button>
+                </div>
+
+                <div id="fuera-de-hoja" >
+                    <button id = 'btn_reinicio' class='oculto btn'  onclick='reinicio()'>Reiniciar</buttonn>
+                </div>
+    </div>
+    <div id="hoja" class="marco">
+        <div id="marco-1" class="marco">
+            <div id="marco-2">
+            <div id="marco-3"> </div>
+            <div id="marco-5"></div>
+            <!-- <div id="marco-5-2"></div> -->
+            <img id="entidad-imagen"src="./imgs/logo-amarillo.png" alt="" srcset="">
+            <p id="Nombre-entidad">Sunom</p> 
+            <p id="Nombre-curso" class="text"></p>
+            <p id="Nombre-usuario" class="text"></p>
+            <p id="descripcion" class="text">
+               Ha finalizado el curso  de  <b id="descripcion_especificacion"></b>  satisfactoriamente otorgando el presente certificado en el día de la fecha.
+            </p>
+            <p id="fecha" class="text"></p>
+            <!-- <div id="t2"></div> -->
+            <!-- <img id="t2" src="./imgs/cer.png" alt="" srcset=""> -->
+            
+            <div id="marco-4"></div>
+            <img  id="t3" src="./imgs/firma.png" alt="" srcset="">
+            <!-- <div id="t3"> firma</div> -->
+        </div>
+        </div>
+    </div> 
+    
+</body>
+<footer>
+
+</footer>
+
+<script src="archivo.js"></script>
+</html>
